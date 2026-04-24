@@ -1,0 +1,79 @@
+begin;
+merge into dw.dm_tinta dt
+using
+    (
+        select * from link.dm_tinta order by 1
+    ) MERGE_SUBQUERY
+
+on ( dt.nk_cod_tinta = MERGE_SUBQUERY.nk_cod_tinta )
+
+when not matched then
+
+insert(
+    sk_cod_tinta,
+    nk_cod_tinta,
+    fabrica,
+    cod_fabricante,
+    cor,
+    acabamento,
+    resina,
+    estoque_inicial,
+    tara_caixa,
+    valor_unitario,
+    valor_estoque,
+    data,
+    etl_primeiro_dado,
+    etl_ultimo_dado,
+    etl_versao    
+)
+
+values(
+    MERGE_SUBQUERY.sk_cod_tinta,
+    MERGE_SUBQUERY.nk_cod_tinta,
+    MERGE_SUBQUERY.fabrica,
+    MERGE_SUBQUERY.cod_fabricante,
+    MERGE_SUBQUERY.cor,
+    MERGE_SUBQUERY.acabamento,
+    MERGE_SUBQUERY.resina,
+    MERGE_SUBQUERY.estoque_inicial,
+    MERGE_SUBQUERY.tara_caixa,
+    MERGE_SUBQUERY.valor_unitario,
+    MERGE_SUBQUERY.valor_estoque,
+    MERGE_SUBQUERY.data,
+    MERGE_SUBQUERY.etl_primeiro_dado,
+    MERGE_SUBQUERY.etl_ultimo_dado,
+    MERGE_SUBQUERY.etl_versao     
+)
+
+when matched and(
+    dt.fabrica                   is distinct from     MERGE_SUBQUERY.fabrica
+    or dt.cod_fabricante         is distinct from     MERGE_SUBQUERY.cod_fabricante
+    or dt.cor                    is distinct from     MERGE_SUBQUERY.cor
+    or dt.acabamento             is distinct from     MERGE_SUBQUERY.acabamento
+    or dt.resina                 is distinct from     MERGE_SUBQUERY.resina
+    or dt.estoque_inicial        is distinct from     MERGE_SUBQUERY.estoque_inicial
+    or dt.tara_caixa             is distinct from     MERGE_SUBQUERY.tara_caixa
+    or dt.valor_unitario         is distinct from     MERGE_SUBQUERY.valor_unitario
+    or dt.valor_estoque          is distinct from     MERGE_SUBQUERY.valor_estoque
+    or dt.data                   is distinct from     MERGE_SUBQUERY.data
+    or dt.etl_primeiro_dado      is distinct from     MERGE_SUBQUERY.etl_primeiro_dado
+    or dt.etl_ultimo_dado        is distinct from     MERGE_SUBQUERY.etl_ultimo_dado   
+    or dt.etl_versao                 is distinct from     MERGE_SUBQUERY.etl_versao
+)
+
+then update set 
+
+    fabrica               =   MERGE_SUBQUERY.fabrica,
+    cod_fabricante        =   MERGE_SUBQUERY.cod_fabricante,
+    cor                   =   MERGE_SUBQUERY.cor,
+    acabamento            =   MERGE_SUBQUERY.acabamento,
+    resina                =   MERGE_SUBQUERY.resina,
+    estoque_inicial       =   MERGE_SUBQUERY.estoque_inicial,
+    tara_caixa            =   MERGE_SUBQUERY.tara_caixa,
+    valor_unitario        =   MERGE_SUBQUERY.valor_unitario,
+    valor_estoque         =   MERGE_SUBQUERY.valor_estoque,
+    data                  =   MERGE_SUBQUERY.data, 
+    etl_primeiro_dado     =   MERGE_SUBQUERY.etl_primeiro_dado,
+    etl_ultimo_dado       =   MERGE_SUBQUERY.etl_ultimo_dado,
+    etl_versao            =   MERGE_SUBQUERY.etl_versao;
+commit;
