@@ -4,6 +4,7 @@
   <description/>
   <extended_description/>
   <job_version/>
+  <job_status>0</job_status>
   <directory>/</directory>
   <created_user>-</created_user>
   <created_date>2026/02/02 12:40:17.079</created_date>
@@ -315,7 +316,7 @@
       <attributes/>
       <specification_method>filename</specification_method>
       <trans_object_id/>
-      <filename>Z:\Documentos\Projetos\Sistema_ERP_Tintas\03 - ETL\01_CARGA_STG_TINTA.ktr</filename>
+      <filename>Z:\Documentos\Projetos\Sistema_ERP_Tintas\04 - ETL\01_CARGA_STG\01_CARGA_STG_TINTA.ktr</filename>
       <transname/>
       <arg_from_previous>N</arg_from_previous>
       <params_from_previous>N</params_from_previous>
@@ -354,7 +355,7 @@
       <attributes/>
       <specification_method>filename</specification_method>
       <trans_object_id/>
-      <filename>Z:\Documentos\Projetos\Sistema_ERP_Tintas\03 - ETL\02_CARGA_STG_ESTOQUE.ktr</filename>
+      <filename>Z:\Documentos\Projetos\Sistema_ERP_Tintas\04 - ETL\01_CARGA_STG\02_CARGA_STG_ESTOQUE.ktr</filename>
       <transname/>
       <arg_from_previous>N</arg_from_previous>
       <params_from_previous>N</params_from_previous>
@@ -393,7 +394,7 @@
       <attributes/>
       <specification_method>filename</specification_method>
       <trans_object_id/>
-      <filename>Z:\Documentos\Projetos\Sistema_ERP_Tintas\03 - ETL\03_CARGA_STG_SERVICO.ktr</filename>
+      <filename>Z:\Documentos\Projetos\Sistema_ERP_Tintas\04 - ETL\01_CARGA_STG\03_CARGA_STG_SERVICO.ktr</filename>
       <transname/>
       <arg_from_previous>N</arg_from_previous>
       <params_from_previous>N</params_from_previous>
