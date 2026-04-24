@@ -101,7 +101,7 @@ Interface do sistema de cadastro desenvolvido em VBA para automatizar o registro
 
 ## Dashboard de Análise
 
-![dashboard](https://github.com/VictorEMF/Sistema_ERP_Tintas/blob/main/04%20-%20POWER_BI/IMAGEM/DASHBOAD_VENDAS.png)
+![dashboard](https://github.com/VictorEMF/Sistema_ERP_Tintas/blob/main/06%20-%20POWER_BI/IMAGEM/DASHBOARD%20VENDAS.png)
 Dashboard criado no Power BI para visualização de dados e métricas de vendas
 
 ## 📊 Estrutura do Projeto
