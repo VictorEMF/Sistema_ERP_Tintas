@@ -108,18 +108,39 @@ Dashboard criado no Power BI para visualização de dados e métricas de vendas
 
 ```
 Sistema ERP Customizado - Controle de Estoque, Produção e Financeiro/
-├── 01 - DOCUMENTACAO/           # Manuais e documentação
-├── 02 - ARQUIVOS/               # Arquivos de base e recursos
-│   ├── IMAGEM/                  # Imagens do projeto
-│  
-├── 03 - ETL/                    # Transformações e jobs do Pentaho
-│   ├── IMAGEM/                  # Imagens das transformações
-│  
-├── 04 - POWER_BI/               # Dashboards e relatórios
-│   ├── IMAGEM/                  # Imagens do dashboard
-│  
-├── 05 - PYTHON/                 # Scripts de extração e tratamento de dados
-├── README.md
+├── 01 - DOCUMENTACAO/           # Documentação técnica, manuais de uso e instruções do projeto
+│
+├── 02 - ARQUIVOS/               # Arquivos-base e recursos utilizados no sistema
+│   ├── IMAGEM/                  # Imagens, prints e referências visuais do Excel
+│   ├── ARQUIVO EXCEL/           # Planilhas Excel utilizadas na produção e controle operacional
+│
+├── 03 - SCRIPTS/                # Scripts SQL utilizados na criação e manutenção do banco de dados
+│   ├── DM/                      
+│   │   ├── SCRIPTS SQL/         # Scripts SQL do Data Mart (dimensões, fatos e consultas analíticas)
+│   │
+│   ├── PRODUCAO/
+│       ├── SCRIPTS SQL/         # Scripts SQL do ambiente de produção e operações do ERP
+│
+├── 04 - ETL/                    # Processos ETL, transformações e jobs desenvolvidos no Pentaho
+│   ├── 01_CARGA_STG/            # Carga inicial e tratamento de dados na camada Staging
+│   │   ├── ARQUIVOS_ETL/        # Transformações e jobs ETL da camada Staging
+│   │
+│   ├── 02_CARGA_DM/             # Processos de carga do Data Mart
+│   │   ├── ARQUIVOS_ETL/        # Transformações e jobs ETL do Data Mart
+│   │
+│   ├── 03_CARGA_PRODUCAO/       # Processos ETL relacionados ao ambiente de produção
+│   │   ├── ARQUIVOS_ETL/        # Transformações e jobs ETL da produção
+│   │
+│   ├── IMAGEM/                  # Imagens e fluxos das transformações ETL
+│
+├── 05 - PYTHON/                 # Scripts Python para automações, análises e integração de dados
+│   ├── ARQUIVOS PYTHON/         # Códigos-fonte e scripts desenvolvidos em Python
+│
+├── 06 - POWER_BI/               # Dashboards, relatórios e análises desenvolvidas no Power BI
+│   ├── ARQUIVO POWER BI/        # Arquivos .pbix e relatórios do Power BI
+│   ├── IMAGEM/                  # Prints e imagens dos dashboards e relatórios
+│
+├── README.md                    # Visão geral do projeto, estrutura e instruções de utilização
 ```
 
 ## 🔄 Fluxo do Processo
